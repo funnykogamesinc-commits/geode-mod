@@ -1,8 +1,19 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/MenuLayer.hpp>
+#include <Geode/modify/CCLabelBMFont.hpp>
 
 using namespace geode::prelude;
 
+// ===== GLOBAL FONT HOOK =====
+// This hooks into the creation of EVERY label in the game
+class $modify(CCLabelBMFont) {
+    static CCLabelBMFont* create(const char* str, const char* fntFile) {
+        // We intercept the font file request and replace it with yours
+        return CCLabelBMFont::create(str, "Lemon Milk.fnt");
+    }
+};
+
+// ===== MENU LAYER HOOK =====
 class $modify(MyMenuLayer, MenuLayer) {
     bool init() {
         if (!MenuLayer::init()) return false;
@@ -41,13 +52,12 @@ class $modify(MyMenuLayer, MenuLayer) {
             }
         }
 
-        // ===== CORNER IMAGE =====
+        // ===== CORNER IMAGE (Profilepic.png) =====
         auto cornerImage = CCSprite::create("Profilepic.png");
         if (cornerImage) {
             cornerImage->setScale(0.4f);
-
             auto winSize = CCDirector::sharedDirector()->getWinSize();
-
+            
             float padding = 20.0f;
             float xPos = winSize.width - (cornerImage->getScaledContentSize().width / 2) - padding;
             float yPos = winSize.height - (cornerImage->getScaledContentSize().height / 2) - padding;
