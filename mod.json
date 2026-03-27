@@ -1,0 +1,14 @@
+{
+  "geode": "3.0.0",
+  "id": "mr_funnykogames.custom_menu_buttons.so",
+  "version": "v1.0.0",
+  "name": "Custom Menu Buttons",
+  "developer": "Mr_FunnykoGames",
+  "description": "Customize your Main Menu! <cy>Change Colors</c> for Play, More Games, Icons, and Editor buttons. Includes an <cr>Exclusive Watermark</c> for Mr_FunnykoGames.\n\n<cg>Links:</c>\n* <cl>Subscribe to Mr_FunnykoGames on YouTube: </c> [https://youtube.com/@Mr_FunnykoGames](youtube.com/@Mr_FunnykoGames)\n* <cp>Support me on </c> [https://Ko-Fi.com/funnykogames](ko-fi.com/funnykogames)\n\n**Thanks for the support! <cr><3</c>**",
+  "dependencies": [
+    {
+      "id": "geode.loader",
+      "version": "^5.4.1"
+    }
+  ]
+}
