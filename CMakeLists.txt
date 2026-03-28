@@ -4,8 +4,8 @@ project(CustomMenuButtons)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# 🔥 IMPORTANT FIX
-set(GEODE_TARGET_PLATFORM Win32)
+# ✅ Correct platform
+set(GEODE_TARGET_PLATFORM Windows)
 
 add_subdirectory(geode)
 
