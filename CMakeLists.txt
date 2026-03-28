@@ -4,8 +4,8 @@ project(CustomMenuButtons)
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# ✅ Correct platform
-set(GEODE_TARGET_PLATFORM Windows)
+# ✅ correct for GitHub Actions
+set(GEODE_TARGET_PLATFORM Linux)
 
 add_subdirectory(geode)
 
