@@ -1,10 +1,12 @@
 cmake_minimum_required(VERSION 3.13)
-project(CustomMenuButtons VERSION 1.0.0)
+project(CustomMenuButtons)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Use the real SDK
+# 🔥 IMPORTANT FIX
+set(GEODE_TARGET_PLATFORM Win32)
+
 add_subdirectory(geode)
 
 add_geode_mod(
