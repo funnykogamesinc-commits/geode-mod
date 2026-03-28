@@ -1,0 +1,5 @@
+- name: Configure
+  run: |
+    mkdir build
+    cd build
+    cmake .. -DGEODE_TARGET_PLATFORM=Linux
